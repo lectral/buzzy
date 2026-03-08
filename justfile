@@ -12,6 +12,18 @@ start:
 dev:
     node src/server.js
 
+# Lint code
+lint:
+    npm run lint
+
+# Auto-fix linting errors
+lint-fix:
+    npm run lint:fix
+
+# Run server and watch for changes
+watch:
+    npm run watch
+
 # Show all available commands
 help:
     @just --list

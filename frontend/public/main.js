@@ -99,7 +99,7 @@ function updateState(data) {
 
     // Play sound when a new buzz is received
     if (state.events.length > oldBuzzCount) {
-        audio.play().catch(e => console.log('Audio play failed (user interaction needed first)'));
+        audio.play().catch(() => console.log('Audio play failed (user interaction needed first)'));
     }
 
     renderLockState();

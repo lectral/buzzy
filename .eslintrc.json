@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "ignorePatterns": ["node_modules/", "dist/", "build/", "coverage/"],
+  "rules": {
+    "indent": ["error", 4],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-unused-vars": ["warn"],
+    "no-console": "off",
+    "eqeqeq": ["error", "always"],
+    "curly": ["error", "all"]
+  },
+  "overrides": [
+    {
+      "files": ["frontend/public/**/*.js"],
+      "env": {
+        "browser": true
+      },
+      "globals": {
+        "module": "readonly"
+      }
+    },
+    {
+      "files": ["src/**/*.js", "tests/**/*.js"],
+      "env": {
+        "node": true
+      }
+    }
+  ]
+}
