@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchy Buzzers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div id="app">
+        <button id="btn-settings" class="corner-btn top-left">Settings</button>
+        <button id="btn-reset" class="corner-btn top-right">Reset (0/3)</button>
+
+        <div id="buzzers-container" class="buzzers-grid">
+            <!-- Buzzers injected here -->
+        </div>
+
+        <div id="results-bar" class="sketchy-box">
+            <h3>Results</h3>
+            <ul id="results-list"></ul>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal hidden">
+        <div class="modal-content sketchy-box">
+            <h2>Settings</h2>
+            
+            <div class="setting-row" style="justify-content: space-between; border-bottom: 2px solid var(--stroke-color); padding-bottom: 10px; margin-bottom: 15px;">
+                <label for="theme-switch" style="font-size: 1.2rem; cursor: pointer;">Dark Mode</label>
+                <input type="checkbox" id="theme-switch" style="width: 20px; height: 20px; accent-color: var(--stroke-color); cursor: pointer;">
+            </div>
+
+            <div id="settings-buzzers-list"></div>
+            <button id="btn-add-buzzer" class="sketchy-btn">Add Buzzer</button>
+            <div class="modal-actions">
+                <button id="btn-save-settings" class="sketchy-btn primary">Save</button>
+                <button id="btn-cancel-settings" class="sketchy-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main-utils.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
