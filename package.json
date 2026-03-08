@@ -8,10 +8,12 @@
     "dev": "node src/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "test": "node --test"
   },
   "devDependencies": {
     "eslint": "^8.50.0",
+    "jsdom": "^28.1.0",
     "nodemon": "^3.1.10"
   }
 }

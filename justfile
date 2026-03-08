@@ -24,6 +24,10 @@ lint-fix:
 watch:
     npm run watch
 
+# Run tests
+test:
+    npm test
+
 # Show all available commands
 help:
     @just --list
